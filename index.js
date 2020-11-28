@@ -8,7 +8,7 @@ const { API_VERSION, IP_SERVER, PORT_DB } = require("./config");
 //conexion de server a basse de datos
 mongoose.set("useFindAndModify", false);
 mongoose.connect(
-  `mongodb://${IP_SERVER}:${PORT_DB}/daneilalejandroserrano`,
+  `mongodb+srv://Daniel:daniel1234@webpersonalcurso.ra4ql.mongodb.net/WebPersonalCursoDB?retryWrites=true&w=majority`,
   { useNewUrlParser: true, useUnifiedTopology: true },
   (err, res) => {
     if (err) {
