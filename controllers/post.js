@@ -34,7 +34,7 @@ function getPosts( req, res ){
                 res.status(404).send({ code: 404, message: 'No se ha encontrado ningun post' }); 
             }
             else{
-                res.status(200).send({ code: 200, posts: postsStored });
+                res.status(200).send({ code: 200, message: `Post encontados ${ postsStored.docs.length }`, posts: postsStored });
             }
         }
     } )
@@ -51,7 +51,7 @@ function getPost( req, res ){
                 res.status(404).send({ code: 404, message: 'No se ha encontrado ningun post' }); 
             }
             else{
-                res.status(200).send({ code: 200, post: postStored });
+                res.status(200).send({ code: 200, messae: `Post "${ postStored.title }" obtenido`,post: postStored });
             }
         }
     });
